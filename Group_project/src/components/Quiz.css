@@ -1,0 +1,239 @@
+/* src/Quiz.css */
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background-color: rgba(240, 240, 240, 0.486); /* Light shade background */
+  background-image: url('./quiz_bg.jpg'); /* Replace with your background image path */
+  background-size: cover; /* Cover the entire background */
+  background-attachment: fixed; /* Fix the background image */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+.quiz-container {
+  height: 100vh;
+  width: 160vh; /* Make the container full width */
+  padding: 30px; /* Increased padding */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.quiz-container h2 {
+  margin: 30px 0; /* Increased margin */
+  margin-bottom: 10px;
+  font-size: 2.5em; /* Increased font size */
+  color: #333;
+}
+
+.quiz-container p {
+  margin: 10px 0; /* Increased margin */
+  font-size: 1.5em; /* Increased font size */
+  text-align: center;
+  color: #333;
+  font-weight: 500;
+}
+
+.scores {
+  margin: 30px 0; /* Increased margin */
+  text-align: left;
+  width: 100%;
+  max-width: 100%; /* Ensure it uses full width of the container */
+}
+
+.scores p {
+  font-size: 1.5em; /* Increased font size */
+  color: #313131;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 20px; /* Increased margin */
+}
+
+.score-item {
+  display: flex;
+  align-items: center;
+  padding: 15px; /* Increased padding */
+  margin-bottom: 20px; /* Increased margin */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.quiz-icon {
+  width: 50px; /* Increased size */
+  height: 50px; /* Increased size */
+  margin-right: 20px; /* Increased space between image and text */
+  margin-left: 20px;
+}
+
+.score-info {
+  flex-grow: 1; /* Ensure it takes up remaining space */
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  justify-content: space-around; /* Distribute space between items */
+  margin-top: 10px;
+  margin-left: -100px; /* Space between text and score */
+}
+
+.quiz-title {
+  font-size: 1.4em; /* Increased font size */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.quiz-date {
+  font-size: 1.1em; /* Increased font size */
+  color: #696969be;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.quiz-status {
+  font-size: 1.1em; /* Increased font size */
+  color: #28a745;
+  font-weight: bold;
+}
+
+.score {
+  width: 90px;
+  font-size: 1.2em; /* Increased font size */
+  text-align: center;
+  margin-right: 20px;
+  background-color: #39b355;
+  color: #fff;
+  padding: 8px 20px; /* Increased padding */
+  border-radius: 5px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent score from wrapping */
+  border-radius: 30px;
+  color: #000000;
+}
+
+.buttons {
+  display: flex;
+  gap: 30px; /* Increased gap */
+  margin-top: 30px; /* Increased margin */
+}
+
+.btn {
+  padding: 15px 30px; /* Increased padding */
+  font-size: 1.2em; /* Increased font size */
+  color: #000000;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.start-quiz {
+  background-color: #28a745;
+}
+
+.start-quiz:hover {
+  background-color: #218838;
+}
+
+.question-bank {
+  background-color: #ffc107;
+}
+
+.question-bank:hover {
+  background-color: #e0a800;
+}
+
+/* Media query for small devices */
+@media (max-width: 768px) {
+  .quiz-container {
+      padding: 20px; /* Decrease padding for small devices */
+      width: 100%; /* Ensure it uses full width on small devices */
+  }
+
+  .quiz-container h2 {
+      font-size: 2em; /* Decrease font size for small devices */
+      margin-top: 25%;
+  }
+
+  .quiz-container p {
+      margin-left: 5px;
+      font-size: 1.2em; /* Decrease font size for small devices */
+      color: #333;
+      font-weight: 500;
+      margin-bottom: 30px;
+  }
+
+  .scores {
+      margin: 20px 0; /* Decrease margin for small devices */
+      max-width: 100%; /* Ensure it fits within the screen */
+  }
+
+  .score-info {
+      flex-grow: 1; /* Ensure it takes up remaining space */
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      margin-top: 0px;
+      margin-right: 20px; /* Increased space between text and score */
+      margin-left: 0px; /* Space between text and score */
+  }
+
+  .scores p {
+      font-size: 1.2em; /* Decrease font size for small devices */
+      margin-bottom: 20px;
+  }
+
+  .score-item {
+      flex-direction: row; /* Align items in a row on small devices */
+      align-items: center; /* Align items vertically centered */
+      padding-left: 15px; /* Decrease padding for small devices */
+      border-radius: 10px;
+  }
+
+  .quiz-icon {
+      width: 50px; /* Decrease size for small devices */
+      height: 50px; /* Decrease size for small devices */
+      margin-right: 10px; /* Adjust margin for small devices */
+      margin-left: 0px;
+  }
+
+  .quiz-title {
+      font-size: 1.2em; /* Decrease font size for small devices */
+      margin: 3px;
+  }
+
+  .quiz-date, .quiz-status {
+      margin: 3px;
+      font-size: 0.9em; /* Decrease font size for small devices */
+  }
+
+  .score {
+      width: 80px;
+      text-align: center;
+      margin-right: 0px;
+      font-size: 1em; /* Decrease font size for small devices */
+      padding: 8px 10px; /* Decrease padding for small devices */
+      margin-top: 5px; /* Add margin to separate from other elements */
+      border-radius: 20px;
+      color: #000000;
+  }
+
+  .buttons {
+      flex-direction: column; /* Stack buttons vertically on small devices */
+      gap: 3px; /* Decrease gap between buttons for small devices */
+      margin-top: 10px; /* Decrease margin for small devices */
+      margin-bottom: 50px;
+  }
+
+  .btn {
+      padding: 10px 20px; /* Decrease padding for small devices */
+      font-size: 1em; /* Decrease font size for small devices */
+  }
+
+  .question-bank {
+      margin-bottom: 20%;
+  }
+}

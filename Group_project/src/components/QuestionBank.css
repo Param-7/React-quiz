@@ -1,0 +1,136 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(240, 240, 240, 0.486); /* Light shade background */
+    background-image: url('./quiz_bg.jpg'); /* Replace with your background image path */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+  }
+  
+  .question-bank-container {
+    padding: 20px; /* Increased padding for better spacing */
+    max-width: 800px;
+    max-height: 100vh; /* Use full viewport height */
+    overflow-y: scroll; /* Allow vertical scrolling if content overflows */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  /* Hide scrollbar for Webkit Browsers (Chrome, Safari, Edge) */
+  .question-bank-container::-webkit-scrollbar {
+    width: 0; /* Hide scrollbar */
+    background: transparent; /* Transparent track */
+  }
+  
+  /* Hide scrollbar for Firefox */
+  .question-bank-container {
+    scrollbar-width: none; /* Hide scrollbar */
+  }
+  
+  /* Hide scrollbar for Internet Explorer and Edge */
+  .question-bank-container {
+    -ms-overflow-style: none; /* Hide scrollbar */
+  }
+  
+  .question-card {
+    margin-bottom: 20px; /* Adjust spacing between question cards */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 25px; /* Adjusted padding */
+    padding-left: 4%;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  .question-card p{
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .options {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column; /* Stack options vertically */
+    justify-content: center; /* Center the options horizontally */
+    align-items: center; /* Center the options vertically */
+  }
+  
+  .option {
+    margin: 5px 0;
+    border-radius: 5px;
+    width: 90%;
+    margin-right: 2%;
+    color: #fff; /* White text for better readability */
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* Ensure text is readable */
+  }
+  
+  .correct-answer {
+    color: #4caf50; /* Ensure correct answer text is visible */
+    font-weight: bold;
+  }
+  .correct-answers {
+    color: #4caf50; /* Ensure correct answer text is visible */
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  
+  /* Add styles for the Dashboard button */
+.btn-dashboard {
+    width: 90%;
+    display: block;
+    margin: 30px auto; /* Center the button horizontally */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000; /* Green background */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-dashboard:hover {
+    background-color: #333333; /* Darker green on hover */
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.7em;
+      margin-bottom: 30px;
+    }
+    .question-bank-container {
+      max-height: 90vh; /* Ensure the container fits within viewport height on small screens */
+    }
+    .question-card {
+      width: 90%;
+      margin: 0 auto; /* Center the card horizontally */
+      margin-bottom: 20px;
+      padding: 25px; /* Adjust padding for small screens */
+    }
+    .question-card p{
+        margin-left: 5px;
+      }
+    .option {
+      width: 95%; /* Ensure options fit within the card */
+      font-size: 14px; /* Smaller font size for small screens */
+      padding: 8px;
+    }
+    
+    .correct-answer {
+        text-align: right;
+        justify-content: right;
+      font-size: 1em; /* Adjust font size for small screens */
+    }
+    .correct-answers {
+        text-align: right;
+        justify-content: right;
+        margin-left: 20px;
+      font-size: 1em; /* Adjust font size for small screens */
+    }
+  }
+  

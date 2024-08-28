@@ -1,0 +1,221 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.section {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(255, 255, 255, 0.445); /* Background color */
+    position: relative; /* Ensure positioning context for child elements */
+}
+
+.logo {
+    padding-top: 4%;
+    width: 20%;
+    display: flex; /* Center content in flex container */
+    justify-content: center; /* Center horizontally */
+}
+
+.logo h1 {
+    color: #b2244b;
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 3em;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+    margin-top: -50px;
+    padding-right: 5%;
+}
+
+.nav-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-top: 0px;
+    padding-right: 30px;
+}
+
+.nav-links ul li a {
+    color: #000066;
+    font-family: "Ubuntu Mono", monospace;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    margin-top: 10px;
+}
+
+.nav-links ul li:hover::after {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.text_box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text_box h1 {
+    font-size: 64px;
+    padding-bottom: 20px;
+    color: #000066;
+    font-family: "Ubuntu Mono", monospace;
+}
+
+.text_box p {
+    margin: 0px 0 0px;
+    font-size: 24px;
+    font-family: "Ubuntu", sans-serif;
+    color: #b2244b;
+}
+
+.hero-btn {
+    width: 30%;
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #000066;
+    border: 1px solid #000066;
+    padding: 12px 34px;
+    font-size: 18px;
+    font-family: "Ubuntu", sans-serif;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid #b2244b;
+    background: #b2244b;
+    transition: 0.3s;
+    color: rgb(255, 255, 255);
+}
+
+/* Media Queries for Smaller Devices */
+@media screen and (max-width: 1000px) {
+    .section {
+        width: 100%;
+    }
+
+    .logo {
+        width: 40%;
+        padding-top: 2%; /* Reduced padding-top */
+    }
+
+    .logo h1 {
+        font-size: 2.5em;
+    }
+
+    .nav-links {
+        margin-top: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-direction: row; /* Ensure items are in a row */
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .nav-links ul li {
+        padding: 10px 15px; /* Reduced padding */
+    }
+
+    .nav-links ul li a {
+        font-size: 18px;
+    }
+
+    .text_box h1 {
+        font-size: 48px;
+    }
+
+    .text_box p {
+        font-size: 18px;
+    }
+
+    .hero-btn {
+        width: 50%;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+        background-color: rgba(255, 255, 255, 0.61); /* Background color */
+        position: static; /* Ensure positioning context for child elements */
+    }
+
+    .logo {
+        width: 100%;
+        padding-top: 20%; /* Reduced padding-top */
+        justify-content: center; /* Center horizontally */
+    }
+
+    .logo h1 {
+        text-align: center;
+        font-size: 2.4em;
+    }
+
+    .nav-links {
+        margin-top: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-direction: row; /* Ensure items are in a row */
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .nav-links ul li {
+        padding: 10px 10px; /* Reduced padding */
+    }
+
+    .nav-links ul li a {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .text_box h1 {
+        margin-top: 29%;
+        font-size: 36px;
+    }
+
+    .text_box p {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .hero-btn {
+        margin-top: 50px;
+        width: 70%;
+        font-size: 19px;
+
+    }
+}
